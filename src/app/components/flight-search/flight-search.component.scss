@@ -3,12 +3,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url("../../../assets/images/passenger-airplane-landing.jpg");
 }
 
 .form {
-    width: 80%;
-    margin-bottom: 3%;
+    width: 100%;
+    background-image: url("../../../assets/images/passenger-airplane-landing.jpg");
 }
 
 mat-icon {
@@ -16,10 +15,12 @@ mat-icon {
 }
 
 .flight-search {
+    width: 80%;
     padding: 5%;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 10%;
+    margin: auto;
+    margin-top: 5%;
     border-radius: 20px;
     background-color: #fff;
 }
@@ -27,6 +28,7 @@ mat-icon {
 .search-button-row {
     display: flex;
     margin-top: -28px;
+    margin-bottom: 3%;
     justify-content: center;
 }
 
@@ -35,6 +37,14 @@ mat-icon {
     height: 72px;
     color: black;
     background: rgb(252, 205, 3);
+}
+
+.search-form {
+    margin-top: 3%;
+}
+
+.search {
+    margin-left: 15%;
 }
 
 mat-form-field {
@@ -48,8 +58,9 @@ mat-form-field {
 }
 
 .flights {
-    width: 70%;
-    margin-top: 10px;
+    width: 100%;
+    margin: auto;
+    background-color: #ebf0f4;
 }
 
 .placeholder {
@@ -59,4 +70,5 @@ mat-form-field {
     justify-content: center;
     font-size: 36px;
     color: lightgray;
+    background-color: #ebf0f4;
 }

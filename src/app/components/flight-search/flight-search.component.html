@@ -35,8 +35,8 @@
 
 
     <div *ngIf="flights" class="flights">
-        <form>
-            <mat-form-field>
+        <form class="search-form">
+            <mat-form-field class="search">
                 <input type="text" matInput placeholder="Search..." name="search" [(ngModel)]="searchText"
                     autocomplete="off" (input)="search()">
                 <button matSuffix mat-button>

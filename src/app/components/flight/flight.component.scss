@@ -3,12 +3,13 @@
 }
 
 .flight {
-    display: flex;
+    width: 70%;
     height: 200px;
-    margin: 10px 0;
+    display: flex;
+    margin: auto;
+    margin-bottom: 10px;
     background: #fff;
     border-radius: 15px;
-    display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
