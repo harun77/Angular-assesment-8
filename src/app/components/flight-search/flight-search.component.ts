@@ -13,6 +13,10 @@ export class FlightSearchComponent implements OnInit {
 
   flights: any;
 
+  filteredFlights: any;
+
+  searchText: any;
+
   constructor(private fb: FormBuilder, private flightService: FlightService) {
     this.userForm = fb.group({
       'departureAirport': ['', Validators.required],
@@ -38,7 +42,17 @@ export class FlightSearchComponent implements OnInit {
 
     this.flightService.getFlights(data).subscribe(flights => {
       this.flights = flights;
+      this.filteredFlights = flights;
     });
+  }
+
+  search(): void {
+    this.filteredFlights = this.flights.filter((e: any) => e.AirlineName.toLowerCase().includes(this.searchText.toLowerCase()))
+  }
+
+  clearSearch(): void {
+    this.searchText = '';
+    this.filteredFlights = this.flights;
   }
 
 }

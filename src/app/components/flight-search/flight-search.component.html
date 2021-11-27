@@ -33,8 +33,19 @@
         </div>
     </form>
 
-    <div class="flights">
-        <flight *ngFor="let flight of flights" [flight]="flight"></flight>
+
+    <div *ngIf="flights" class="flights">
+        <form>
+            <mat-form-field>
+                <input type="text" matInput placeholder="Search..." name="search" [(ngModel)]="searchText"
+                    autocomplete="off" (input)="search()">
+                <button matSuffix mat-button>
+                    <mat-icon *ngIf="!searchText">search</mat-icon>
+                    <mat-icon *ngIf="searchText" (click)="clearSearch()">clear</mat-icon>
+                </button>
+            </mat-form-field>
+        </form>
+        <flight *ngFor="let flight of filteredFlights" [flight]="flight"></flight>
     </div>
 </div>
 
