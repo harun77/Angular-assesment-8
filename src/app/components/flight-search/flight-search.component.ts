@@ -36,7 +36,7 @@ export class FlightSearchComponent implements OnInit {
       "ReturnDate": this.userForm.get('returnDate')?.value
     };
 
-    this.flightService.getFlights().subscribe(flights => {
+    this.flightService.getFlights(data).subscribe(flights => {
       this.flights = flights;
     });
   }

@@ -37,3 +37,7 @@
         <flight *ngFor="let flight of flights" [flight]="flight"></flight>
     </div>
 </div>
+
+<div *ngIf="!flights" class="placeholder">
+    <p>Search your flight</p>
+</div>

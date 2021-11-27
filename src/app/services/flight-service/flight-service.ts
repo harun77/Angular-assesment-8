@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -11,7 +11,11 @@ export class FlightService {
 
   constructor(public http: HttpClient) { }
 
-  getFlights(): Observable<any> {
-    return this.http.get(this.flightUrl);
+  getFlights(data: any): Observable<any> {
+    let params = new HttpParams();
+    Object.keys(data).forEach(key => {
+      params = params.append(key, data[key]);
+    });
+    return this.http.get(this.flightUrl, { params });
   }
 }

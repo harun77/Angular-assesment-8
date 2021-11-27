@@ -1,10 +1,16 @@
 <div class="flight">
     <div class="description">
-        <img [src]="flight.AirlineLogoAddress" alt="AirlineLogoAddress">
-        <p class="name"> {{ flight.AirlineName }}</p>
+        <div class="name">
+            <img [src]="flight.AirlineLogoAddress" alt="AirlineLogoAddress">
+            <p> {{ flight.AirlineName }}</p>
+        </div>
+        <div class="duration">
+            <p>Inbound flights duration - {{ flight.InboundFlightsDuration }}</p>
+            <p>Outbound flights duration - {{ flight.OutboundFlightsDuration }}</p>
+        </div>
     </div>
     <div class="price">
-        <p class="amount">BDT {{ flight.TotalAmount }}</p>
+        <p class="amount">USD {{ flight.TotalAmount }}</p>
         <button class="example-button" mat-raised-button color="primary">
             Select
             <mat-icon>arrow_forward</mat-icon>
