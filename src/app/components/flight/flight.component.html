@@ -1,0 +1,13 @@
+<div class="flight">
+    <div class="description">
+        <img [src]="flight.AirlineLogoAddress" alt="AirlineLogoAddress">
+        <p class="name"> {{ flight.AirlineName }}</p>
+    </div>
+    <div class="price">
+        <p class="amount">BDT {{ flight.TotalAmount }}</p>
+        <button class="example-button" mat-raised-button color="primary">
+            Select
+            <mat-icon>arrow_forward</mat-icon>
+        </button>
+    </div>
+</div>

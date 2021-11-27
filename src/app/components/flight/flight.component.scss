@@ -1,0 +1,43 @@
+.flight {
+    display: flex;
+    height: 200px;
+    margin: 10px 0;
+    background: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid lightgray;
+}
+
+.description {
+    width: 75%;
+    text-align: center;
+}
+
+.name {
+    margin-top: 2%;
+}
+
+.price {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    background-color: rgb(236, 243, 254);
+}
+
+p {
+    font-size: 24px;
+}
+
+.example-button {
+    width: 80%;
+    height: 30%;
+    color: black;
+    background-color: rgb(252, 205, 3);
+}

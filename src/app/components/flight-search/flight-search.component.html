@@ -1,0 +1,39 @@
+<div class="container">
+    <form [formGroup]="userForm" class="form">
+        <div class="flight-search">
+            <mat-form-field appearance="outline">
+                <mat-label>Departure airport code</mat-label>
+                <input matInput type="text" formControlName="departureAirport" autocomplete="off">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Arrival airport code</mat-label>
+                <input matInput type="text" formControlName="arrivalAirport" autocomplete="off">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Departure date</mat-label>
+                <input matInput [matDatepicker]="departureDatePicker" formControlName="departureDate"
+                    autocomplete="off">
+                <mat-datepicker-toggle matSuffix [for]="departureDatePicker">
+                    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #departureDatePicker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Return date</mat-label>
+                <input matInput [matDatepicker]="returnDatePicker" formControlName="returnDate" autocomplete="off">
+                <mat-datepicker-toggle matSuffix [for]="returnDatePicker">
+                    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #returnDatePicker></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="search-button-row">
+            <button class="search-button" mat-flat-button color="primary" (click)="submit()">Search</button>
+        </div>
+    </form>
+
+    <div class="flights">
+        <flight *ngFor="let flight of flights" [flight]="flight"></flight>
+    </div>
+</div>
